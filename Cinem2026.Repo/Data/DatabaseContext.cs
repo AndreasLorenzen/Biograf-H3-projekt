@@ -18,8 +18,9 @@ namespace Cinema2026.Repo.Data
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options) { }
 
-        DbSet<Person> Persons { get; set; }
-
+        public DbSet<Person> Persons { get; set; }
+        public DbSet<MovieHall> MovieHalls { get; set; }
+        public DbSet<Movie> Movies { get; set; }
 
     }
     //public class ApplicationDbContext : DbContext

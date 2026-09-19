@@ -1,98 +1,76 @@
 ﻿using Cinema2026.API.Models;
+using Cinema2026.Repo.Data;
 using Cinema2026.Repo.Interfaces;
 using Cinema2026.Repo.Models;
 using Cinema2026.Repo.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Cinema2026.API.Controllers
 {
-    [Route("api/[controller]")] //https://localhost:7073/api/person
+    [Route("api/[controller]")] // https://localhost:7073/api/person
     [ApiController]
     public class PersonController : ControllerBase
     {
-        // this class uses Repository. to do so we instance an objec
+        // this class uses Repository. to do so we instance an object
         // variable of type PersonRepositories
 
-        IPersonRepositories personRepo;// = new PersonRepositories();
-        public PersonController(IPersonRepositories r)
+        IPersonRepositories personRepo; // = new PersonRepositories();
+        private readonly DatabaseContext context;
+
+        public PersonController(IPersonRepositories r, DatabaseContext d)
         {
             personRepo = r;
+            context = d;
         }
 
+        // GET api/Person
         [HttpGet]
         public List<Person> GetPersons()
         {
             return personRepo.GetPersons();
         }
 
+        // GET api/Person/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Person>> GetPersonAsync(int id)
+        {
+            var person = await context.Persons.FirstOrDefaultAsync(p => p.PersonId == id);
 
-        #region Firsttry
-        //PersonRepositories personRepo;// = new PersonRepositories();
-        //public PersonController(PersonRepositories r) {
-        //    personRepo = r;
-        //}
+            if (person == null)
+            {
+                return NotFound();
+            }
 
-        //[HttpGet]
-        //public List<Person> GetPersons()
-        //{
-        //    return personRepo.GetPersons();
-        //}
-        #endregion Firsttry
+            return person;
+        }
 
+        // POST api/Person
+        [HttpPost]
+        public async Task<Person> CreatePerson(Person person)
+        {
+            context.Persons.Add(person);
+            await context.SaveChangesAsync();
+            return person;
+        }
 
+        // DELETE api/Person/{id}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePersonAsync(int id)
+        {
+            var person = await context.Persons.FindAsync(id);
 
+            if (person == null)
+            {
+                return NotFound();
+            }
 
+            context.Persons.Remove(person);
+            await context.SaveChangesAsync();
 
-
-        //List<Person> persons = new List<Person>()
-        //{
-        //    new Person() { Id = 1, name = "John", age = 30 },
-        //    new Person() { Id = 2, name = "Jane", age = 25 },
-        //    new Person() { Id = 3, name = "Bob", age = 40 }
-        //};
-        // using my persons list
-        //[HttpGet]
-        //public List<Person> GetPersons()
-        //{
-        //    return persons;
-        //}
-        // using an object from the list
-        //[HttpGet]
-        //public 
-
-
-        //// GET: api/<PersonController>
-        //[HttpGet]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
-        //// GET api/<PersonController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
-        //// POST api/<PersonController>
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
-
-        //// PUT api/<PersonController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
-
-        //// DELETE api/<PersonController>/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
+            return NoContent();
+        }
     }
 }

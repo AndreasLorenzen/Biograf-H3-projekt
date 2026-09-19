@@ -1,25 +1,60 @@
 ﻿using Cinema2026.Repo.Interfaces;
 using Cinema2026.Repo.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using Cinema2026.Repo.Data;
 
 namespace Cinema2026.Repo.Repositories
 {
-    public class PersonRepositories:IPersonRepositories
+    public class PersonRepositories : IPersonRepositories
     {
+
+        private readonly DatabaseContext context;
+        public PersonRepositories(DatabaseContext d)
+        {
+            context = d;
+        }
+
+
+        public async Task<Person> GetPersonAsync(int id)
+        {
+            return await context.Persons.FirstOrDefaultAsync(p => p.PersonId == id);
+        }
+
+        public async Task<Person> CreatePerson(Person person)
+        {
+            //context.Persons.Add(new Person() { age = 5, name = "John" });
+            context.Persons.Add(person);
+            await context.SaveChangesAsync();
+            return person;
+        }
         // create 
         // get
         List<Person> persons = new List<Person>()
         {
-            new Person() { Id = 1, name = "John", age = 30 },
-            new Person() { Id = 2, name = "Jane", age = 25 },
-            new Person() { Id = 3, name = "Bob", age = 40 }
+            new Person() { PersonId = 1, Personname = "John", Personage = 30 },
+            new Person() { PersonId = 2, Personname = "Jane", Personage = 25 },
+            new Person() { PersonId = 3, Personname = "Bob", Personage = 40 }
         };
+
+
+        //public Task<Person> DeletePersonAsync()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         // using my persons list
         public List<Person> GetPersons()
         {
             return persons;
         }
+
+        //public Task<Person> DeletePersonAsync(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
