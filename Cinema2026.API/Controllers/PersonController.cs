@@ -1,74 +1,98 @@
-﻿using Cinema2026.API.Models;
-using Cinema2026.Repo.Data;
+﻿using Cinema2026.API.Dtos;
 using Cinema2026.Repo.Interfaces;
 using Cinema2026.Repo.Models;
-using Cinema2026.Repo.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Cinema2026.API.Controllers
 {
-    [Route("api/[controller]")] // https://localhost:7073/api/person
+    [Route("api/[controller]")]
     [ApiController]
     public class PersonController : ControllerBase
     {
-        // this class uses Repository. to do so we instance an object
-        // variable of type PersonRepositories
+        private readonly IPersonRepositories personRepo;
 
-        IPersonRepositories personRepo; // = new PersonRepositories();
-        private readonly DatabaseContext context;
-
-        public PersonController(IPersonRepositories r, DatabaseContext d)
+        public PersonController(IPersonRepositories r)
         {
             personRepo = r;
-            context = d;
         }
 
-        // GET api/Person
+        // Lille hjælpe-metode: oversætter en Person (model) til en PersonReadDto (det vi viser klienten)
+        private PersonReadDto ToReadDto(Person p)
+        {
+            return new PersonReadDto
+            {
+                PersonId = p.PersonId,
+                Personname = p.Personname,
+                Personage = p.Personage,
+                MovieHallId = p.MovieHallId
+            };
+        }
+
+        // GET: api/Person
         [HttpGet]
-        public List<Person> GetPersons()
+        public async Task<ActionResult<IEnumerable<PersonReadDto>>> GetPersons()
         {
-            return personRepo.GetPersons();
+            var persons = await personRepo.GetPersons();
+
+            // .Select() oversætter hver Person i listen til en PersonReadDto
+            var result = persons.Select(ToReadDto);
+
+            return Ok(result);
         }
 
-        // GET api/Person/{id}
+        // GET: api/Person/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Person>> GetPersonAsync(int id)
+        public async Task<ActionResult<PersonReadDto>> GetPerson(int id)
         {
-            var person = await context.Persons.FirstOrDefaultAsync(p => p.PersonId == id);
+            var person = await personRepo.GetPerson(id);
+            if (person == null) return NotFound();
 
-            if (person == null)
-            {
-                return NotFound();
-            }
-
-            return person;
+            return ToReadDto(person);
         }
 
-        // POST api/Person
+        // POST: api/Person
         [HttpPost]
-        public async Task<Person> CreatePerson(Person person)
+        public async Task<ActionResult<PersonReadDto>> PostPerson(PersonCreateDto dto)
         {
-            context.Persons.Add(person);
-            await context.SaveChangesAsync();
-            return person;
+            // Byg en "rigtig" Person ud fra DTO'en - PersonId sættes ikke, databasen genererer det
+            var person = new Person
+            {
+                Personname = dto.Personname,
+                Personage = dto.Personage,
+                MovieHallId = dto.MovieHallId
+            };
+
+            var created = await personRepo.PostPerson(person);
+
+            // Returnér den oprettede person som en ReadDto, med 201 Created
+            return CreatedAtAction(nameof(GetPerson), new { id = created.PersonId }, ToReadDto(created));
         }
 
-        // DELETE api/Person/{id}
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePersonAsync(int id)
+        // PUT: api/Person/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutPerson(int id, PersonUpdateDto dto)
         {
-            var person = await context.Persons.FindAsync(id);
-
-            if (person == null)
+            // Byg en Person-model ud fra ID (fra URL) + DTO (fra body)
+            var person = new Person
             {
-                return NotFound();
-            }
+                PersonId = id,
+                Personname = dto.Personname,
+                Personage = dto.Personage,
+                MovieHallId = dto.MovieHallId
+            };
 
-            context.Persons.Remove(person);
-            await context.SaveChangesAsync();
+            var success = await personRepo.PutPerson(id, person);
+            if (!success) return BadRequest();
+
+            return NoContent();
+        }
+
+        // DELETE: api/Person/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePerson(int id)
+        {
+            var success = await personRepo.DeletePerson(id);
+            if (!success) return NotFound();
 
             return NoContent();
         }

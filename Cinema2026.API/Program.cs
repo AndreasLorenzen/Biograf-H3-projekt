@@ -22,6 +22,12 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 builder.Services.AddScoped<IPersonRepositories,PersonRepositories>();
 builder.Services.AddScoped<IMovieHallRepositories, MovieHallRepositories>();
 
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    });
+
 //builder.Services.AddScoped<Interface,class> ();
 
 var app = builder.Build();

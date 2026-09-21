@@ -1,60 +1,58 @@
-﻿using Cinema2026.Repo.Interfaces;
+﻿using Cinema2026.Repo.Data;
+using Cinema2026.Repo.Interfaces;
 using Cinema2026.Repo.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using Cinema2026.Repo.Data;
 
 namespace Cinema2026.Repo.Repositories
 {
     public class PersonRepositories : IPersonRepositories
     {
-
         private readonly DatabaseContext context;
+
         public PersonRepositories(DatabaseContext d)
         {
             context = d;
         }
 
-
-        public async Task<Person> GetPersonAsync(int id)
+        public async Task<IEnumerable<Person>> GetPersons()
         {
-            return await context.Persons.FirstOrDefaultAsync(p => p.PersonId == id);
+            return await context.Persons.ToListAsync();
         }
 
-        public async Task<Person> CreatePerson(Person person)
+        public async Task<Person> GetPerson(int personid)
         {
-            //context.Persons.Add(new Person() { age = 5, name = "John" });
+            return await context.Persons.FirstOrDefaultAsync(p => p.PersonId == personid);
+        }
+
+        public async Task<bool> PutPerson(int? personid, Person person)
+        {
+            if (personid == null || person == null || personid != person.PersonId)
+                return false;
+
+            context.Entry(person).State = EntityState.Modified;
+            await context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<Person> PostPerson(Person person)
+        {
             context.Persons.Add(person);
             await context.SaveChangesAsync();
             return person;
         }
-        // create 
-        // get
-        List<Person> persons = new List<Person>()
+
+        public async Task<bool> DeletePerson(int? personid)
         {
-            new Person() { PersonId = 1, Personname = "John", Personage = 30 },
-            new Person() { PersonId = 2, Personname = "Jane", Personage = 25 },
-            new Person() { PersonId = 3, Personname = "Bob", Personage = 40 }
-        };
+            if (personid == null) return false;
 
+            var p = await context.Persons.FindAsync(personid.Value);
+            if (p == null) return false;
 
-        //public Task<Person> DeletePersonAsync()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        // using my persons list
-        public List<Person> GetPersons()
-        {
-            return persons;
+            context.Persons.Remove(p);
+            await context.SaveChangesAsync();
+            return true;
         }
-
-        //public Task<Person> DeletePersonAsync(int id)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

@@ -17,27 +17,20 @@ namespace Cinema2026.Repo.Repositories
             context = d;
         }
 
-        // Henter alle rækker og laver dem om til en liste via ToListAsync
         public async Task<IEnumerable<MovieHall>> GetMovieHall()
         {
-            return await context.MovieHalls.ToListAsync();
+            // Henter alle sale, og deres tilknyttede personer med det samme
+            return await context.MovieHalls.Include(m => m.Persons).ToListAsync();
         }
 
-        // Henter en enkelt række ud fra id og laver den om til et objekt via FirstOrDefaultAsync
         public async Task<MovieHall> GetMovieHall(int moviehallid)
         {
-            return await context.MovieHalls.FirstOrDefaultAsync(m => m.MovieHallId == moviehallid);
+            // Henter én sal ud fra ID, inklusiv dens tilknyttede personer
+            return await context.MovieHalls
+                .Include(m => m.Persons)
+                .FirstOrDefaultAsync(m => m.MovieHallId == moviehallid);
         }
 
-        // Tilføjer en ny række til databasen og gemmer ændringerne via SaveChangesAsync
-        public async Task<MovieHall> PostMovieHall(MovieHall moviehall)
-        {
-            context.MovieHalls.Add(moviehall);
-            await context.SaveChangesAsync();
-            return moviehall;
-        }
-
-        // Opdaterer en eksisterende række i databasen og gemmer ændringerne via SaveChangesAsync
         public async Task<bool> PutMovieHall(int? moviehallid, MovieHall moviehall)
         {
             if (moviehallid == null || moviehall == null || moviehallid != moviehall.MovieHallId)
@@ -48,8 +41,13 @@ namespace Cinema2026.Repo.Repositories
             return true;
         }
 
+        public async Task<MovieHall> PostMovieHall(MovieHall moviehall)
+        {
+            context.MovieHalls.Add(moviehall);
+            await context.SaveChangesAsync();
+            return moviehall;
+        }
 
-        // Sletter en række fra databasen og gemmer ændringerne via SaveChangesAsync
         public async Task<bool> DeleteMovieHall(int? moviehallid)
         {
             if (moviehallid == null) return false;
@@ -59,7 +57,5 @@ namespace Cinema2026.Repo.Repositories
             await context.SaveChangesAsync();
             return true;
         }
-
-
     }
 }

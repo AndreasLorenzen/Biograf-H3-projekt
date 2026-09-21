@@ -8,6 +8,7 @@ namespace Cinema2026.Repo.Interfaces
 {
     public interface IMovieHallRepositories
     {
+
         public Task<IEnumerable<MovieHall>> GetMovieHall();
 
         public Task<MovieHall> GetMovieHall(int moviehallid);
