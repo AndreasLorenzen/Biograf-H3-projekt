@@ -31,4 +31,12 @@ namespace Cinema2026.Repo.Models
         public List<MovieHall> MovieHalls { get; set; } = new(); // Navigation property til MovieHall }
 
     }
+
+    public class Admin
+    {
+        public int AdminId { get; set; } // primary key
+        public string Username { get; set; }
+        public string Password { get; set; } // NB: klartekst for nu - skal hashes når vi laver Auth
+        public string Email { get; set; }
+    }
 }

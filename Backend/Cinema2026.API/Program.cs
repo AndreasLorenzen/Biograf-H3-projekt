@@ -22,6 +22,7 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 builder.Services.AddScoped<IPersonRepositories,PersonRepositories>();
 builder.Services.AddScoped<IMovieHallRepositories, MovieHallRepositories>();
 builder.Services.AddScoped<IMovieRepositories, MovieRepositories>();
+builder.Services.AddScoped<IAdminRepositories, AdminRepositories>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
