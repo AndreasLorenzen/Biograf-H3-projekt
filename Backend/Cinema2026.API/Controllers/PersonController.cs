@@ -22,8 +22,10 @@ namespace Cinema2026.API.Controllers
             return new PersonReadDto
             {
                 PersonId = p.PersonId,
-                Personname = p.Personname,
-                Personage = p.Personage,
+                name = p.name,
+                age = p.age,
+                Password = p.Password,
+                Email = p.Email,
                 MovieHallId = p.MovieHallId
             };
         }
@@ -57,8 +59,10 @@ namespace Cinema2026.API.Controllers
             // Byg en "rigtig" Person ud fra DTO'en - PersonId sættes ikke, databasen genererer det
             var person = new Person
             {
-                Personname = dto.Personname,
-                Personage = dto.Personage,
+                name = dto.name,
+                age = dto.age,
+                Password = dto.Password,
+                Email = dto.Email,
                 MovieHallId = dto.MovieHallId
             };
 
@@ -76,8 +80,10 @@ namespace Cinema2026.API.Controllers
             var person = new Person
             {
                 PersonId = id,
-                Personname = dto.Personname,
-                Personage = dto.Personage,
+                name = dto.name,
+                age = dto.age,
+                Password = dto.Password,
+                Email = dto.Email,
                 MovieHallId = dto.MovieHallId
             };
 

@@ -5,8 +5,10 @@
     public class PersonReadDto
     {
         public int PersonId { get; set; }
-        public string Personname { get; set; }
-        public int Personage { get; set; }
+        public string name { get; set; }
+        public int age { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
         public int? MovieHallId { get; set; }
     }
 }

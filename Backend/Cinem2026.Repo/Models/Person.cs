@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,8 +8,10 @@ namespace Cinema2026.Repo.Models
     public class Person
     {
         public int PersonId { get; set; } // variable / property -----> primary key
-        public string Personname { get; set; }
-        public int Personage { get; set; }
+        public string name { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public int age { get; set; }
 
         public int? MovieHallId { get; set; } // Foreign key fra MovieHall}
         public MovieHall? MovieHall { get; set; } // Navigation property til MovieHall}

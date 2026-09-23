@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cinema2026.Repo.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20260915105528_And")]
-    partial class And
+    [Migration("20260923081750_start2")]
+    partial class start2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,31 @@ namespace Cinema2026.Repo.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Cinema2026.Repo.Models.Admin", b =>
+                {
+                    b.Property<int>("AdminId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AdminId");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("Cinema2026.Repo.Models.Movie", b =>
                 {
                     b.Property<int>("MovieId")
@@ -31,9 +56,6 @@ namespace Cinema2026.Repo.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MovieId"));
-
-                    b.Property<int?>("MovieHallId")
-                        .HasColumnType("int");
 
                     b.Property<int>("Movieage")
                         .HasColumnType("int");
@@ -43,8 +65,6 @@ namespace Cinema2026.Repo.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MovieId");
-
-                    b.HasIndex("MovieHallId");
 
                     b.ToTable("Movies");
                 });
@@ -60,7 +80,12 @@ namespace Cinema2026.Repo.Migrations
                     b.Property<bool>("MovieHalloccupied")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("MovieId")
+                        .HasColumnType("int");
+
                     b.HasKey("MovieHallId");
+
+                    b.HasIndex("MovieId");
 
                     b.ToTable("MovieHalls");
                 });
@@ -73,13 +98,21 @@ namespace Cinema2026.Repo.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonId"));
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("MovieHallId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Personage")
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("age")
                         .HasColumnType("int");
 
-                    b.Property<string>("Personname")
+                    b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -90,25 +123,32 @@ namespace Cinema2026.Repo.Migrations
                     b.ToTable("Persons");
                 });
 
-            modelBuilder.Entity("Cinema2026.Repo.Models.Movie", b =>
+            modelBuilder.Entity("Cinema2026.Repo.Models.MovieHall", b =>
                 {
-                    b.HasOne("Cinema2026.Repo.Models.MovieHall", null)
-                        .WithMany("MoviesId")
-                        .HasForeignKey("MovieHallId");
+                    b.HasOne("Cinema2026.Repo.Models.Movie", "Movie")
+                        .WithMany("MovieHalls")
+                        .HasForeignKey("MovieId");
+
+                    b.Navigation("Movie");
                 });
 
             modelBuilder.Entity("Cinema2026.Repo.Models.Person", b =>
                 {
-                    b.HasOne("Cinema2026.Repo.Models.MovieHall", null)
-                        .WithMany("PersonsId")
+                    b.HasOne("Cinema2026.Repo.Models.MovieHall", "MovieHall")
+                        .WithMany("Persons")
                         .HasForeignKey("MovieHallId");
+
+                    b.Navigation("MovieHall");
+                });
+
+            modelBuilder.Entity("Cinema2026.Repo.Models.Movie", b =>
+                {
+                    b.Navigation("MovieHalls");
                 });
 
             modelBuilder.Entity("Cinema2026.Repo.Models.MovieHall", b =>
                 {
-                    b.Navigation("MoviesId");
-
-                    b.Navigation("PersonsId");
+                    b.Navigation("Persons");
                 });
 #pragma warning restore 612, 618
         }
