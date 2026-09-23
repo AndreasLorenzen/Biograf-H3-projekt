@@ -1,0 +1,32 @@
+.commonheader {
+  justify-content: space-between;
+  border-bottom: 2px solid;
+  padding: 10px 10px 0;
+  display: flex;
+  margin-left: -5px;
+}
+
+.commonheaderright {
+  margin-right: 5px;
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  
+}
+
+.commonheaderleft {
+  margin-right: -5px;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+#buttonstyle {
+  border-radius: 6px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#buttonstyle:hover {
+  background-color: #d3d5d6;
+}

@@ -1,0 +1,543 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\kode\\Cinema2026RepoClone\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\data\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\data\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Controllers\\MovieController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cinema2026.API\\Controllers\\MovieController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\repositories\\movierepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\repositories\\movierepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\interfaces\\imovierepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\interfaces\\imovierepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\moviereaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\moviereaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\movieupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\movieupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\moviecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\moviecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\migrations\\20260921092112_fixedpersonandmoviehall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\migrations\\20260921092112_fixedpersonandmoviehall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\repositories\\moviehallrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\repositories\\moviehallrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\repositories\\personrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\repositories\\personrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\migrations\\20260916194143_testmoviehall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\migrations\\20260916194143_testmoviehall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\interfaces\\imoviehallrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\interfaces\\imoviehallrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\controllers\\moviehallscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\controllers\\moviehallscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\moviehallupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\moviehallupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\moviehallreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\moviehallreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\moviehallcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\moviehallcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\personcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\personcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\personupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\personupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\dtos\\personreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\dtos\\personreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\interfaces\\ipersonrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\interfaces\\ipersonrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916200622_testnewmodulestructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cinem2026.Repo\\Migrations\\20260916200622_testnewmodulestructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916200100_testnewmodulestructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cinem2026.Repo\\Migrations\\20260916200100_testnewmodulestructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|c:\\kode\\cinema2026repoclone\\cinema2026.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FAAF47B5-F202-9C98-75A9-DB2244507FAF}|Cinema2026.API\\Cinema2026.API.csproj|solutionrelative:cinema2026.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\migrations\\20260914201655_start4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\migrations\\20260914201655_start4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\migrations\\20260916200809_rettetpersonogmoviehallrelationer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\migrations\\20260916200809_rettetpersonogmoviehallrelationer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\migrations\\20260915105528_and.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\migrations\\20260915105528_and.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|c:\\kode\\cinema2026repoclone\\cinem2026.repo\\migrations\\20260915104445_andreas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F77CF64C-74ED-C531-C7BA-550249FEB4E9}|Cinem2026.Repo\\Cinema2026.Repo.csproj|solutionrelative:cinem2026.repo\\migrations\\20260915104445_andreas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IPersonRepositories.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Interfaces\\IPersonRepositories.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Interfaces\\IPersonRepositories.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Interfaces\\IPersonRepositories.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Interfaces\\IPersonRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T06:44:16.873Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovieRepositories.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Repositories\\MovieRepositories.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Repositories\\MovieRepositories.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Repositories\\MovieRepositories.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Repositories\\MovieRepositories.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAUwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T17:07:54.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IMovieRepositories.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Interfaces\\IMovieRepositories.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Interfaces\\IMovieRepositories.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Interfaces\\IMovieRepositories.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Interfaces\\IMovieRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T17:07:04.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MovieUpdateDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieUpdateDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\MovieUpdateDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieUpdateDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\MovieUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:15:50.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Program.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Program.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Program.cs",
+              "RelativeToolTip": "Cinema2026.API\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T06:04:19.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Data\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Data\\DatabaseContext.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Data\\DatabaseContext.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Data\\DatabaseContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwBsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T06:28:19.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Controllers\\MovieController.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "Cinema2026.API\\Controllers\\MovieController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T17:19:48.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MovieCreateDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieCreateDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\MovieCreateDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieCreateDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\MovieCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:15:18.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Models\\Person.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Models\\Person.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Models\\Person.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwBYAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T10:13:31.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20260921092112_FixedPersonAndMovieHall.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260921092112_FixedPersonAndMovieHall.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Migrations\\20260921092112_FixedPersonAndMovieHall.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260921092112_FixedPersonAndMovieHall.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Migrations\\20260921092112_FixedPersonAndMovieHall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T09:21:12.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20260916194143_testmoviehall.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916194143_testmoviehall.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Migrations\\20260916194143_testmoviehall.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916194143_testmoviehall.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Migrations\\20260916194143_testmoviehall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T19:41:44.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MovieReadDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieReadDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\MovieReadDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieReadDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\MovieReadDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:15:30.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PersonRepositories.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Repositories\\PersonRepositories.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Repositories\\PersonRepositories.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Repositories\\PersonRepositories.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Repositories\\PersonRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T06:14:56.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IMovieHallRepositories.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Interfaces\\IMovieHallRepositories.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Interfaces\\IMovieHallRepositories.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Interfaces\\IMovieHallRepositories.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Interfaces\\IMovieHallRepositories.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T09:11:24.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MovieHallRepositories.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Repositories\\MovieHallRepositories.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Repositories\\MovieHallRepositories.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Repositories\\MovieHallRepositories.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Repositories\\MovieHallRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T09:10:04.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MovieHallsController.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Controllers\\MovieHallsController.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Controllers\\MovieHallsController.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Controllers\\MovieHallsController.cs",
+              "RelativeToolTip": "Cinema2026.API\\Controllers\\MovieHallsController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T09:51:57.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MovieHallUpdateDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieHallUpdateDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\MovieHallUpdateDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieHallUpdateDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\MovieHallUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:14:25.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MovieHallReadDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieHallReadDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\MovieHallReadDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieHallReadDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\MovieHallReadDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:14:44.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MovieHallCreateDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieHallCreateDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\MovieHallCreateDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\MovieHallCreateDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\MovieHallCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:14:10.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PersonCreateDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\PersonCreateDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\PersonCreateDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\PersonCreateDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\PersonCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:01:49.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PersonUpdateDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\PersonUpdateDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\PersonUpdateDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\PersonUpdateDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\PersonUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:02:50.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PersonReadDto.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\PersonReadDto.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Dtos\\PersonReadDto.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Dtos\\PersonReadDto.cs",
+              "RelativeToolTip": "Cinema2026.API\\Dtos\\PersonReadDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T20:03:20.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Controllers\\PersonController.cs",
+              "RelativeDocumentMoniker": "Cinema2026.API\\Controllers\\PersonController.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\Controllers\\PersonController.cs",
+              "RelativeToolTip": "Cinema2026.API\\Controllers\\PersonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T06:37:41.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Cinema2026.API\\appsettings.json",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\appsettings.json",
+              "RelativeToolTip": "Cinema2026.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-16T18:17:10.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "20260916200622_testnewmodulestructure.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916200622_testnewmodulestructure.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Migrations\\20260916200622_testnewmodulestructure.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916200622_testnewmodulestructure.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Migrations\\20260916200622_testnewmodulestructure.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T20:06:23.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20260916200809_RettetPersonOgMovieHallRelationer.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916200809_RettetPersonOgMovieHallRelationer.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Migrations\\20260916200809_RettetPersonOgMovieHallRelationer.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916200809_RettetPersonOgMovieHallRelationer.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Migrations\\20260916200809_RettetPersonOgMovieHallRelationer.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T20:08:10.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20260916200100_testnewmodulestructure.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916200100_testnewmodulestructure.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Migrations\\20260916200100_testnewmodulestructure.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260916200100_testnewmodulestructure.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Migrations\\20260916200100_testnewmodulestructure.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwEgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T20:01:00.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20260915105528_And.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260915105528_And.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Migrations\\20260915105528_And.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260915105528_And.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Migrations\\20260915105528_And.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T10:55:28.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "20260915104445_Andreas.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260915104445_Andreas.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Migrations\\20260915104445_Andreas.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260915104445_Andreas.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Migrations\\20260915104445_Andreas.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T10:44:45.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Class1.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Class1.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Class1.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T06:35:10.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20260914201655_start4.cs",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260914201655_start4.cs",
+              "RelativeDocumentMoniker": "Cinem2026.Repo\\Migrations\\20260914201655_start4.cs",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinem2026.Repo\\Migrations\\20260914201655_start4.cs",
+              "RelativeToolTip": "Cinem2026.Repo\\Migrations\\20260914201655_start4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T20:16:56.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Cinema2026.API\\appsettings.Development.json",
+              "ToolTip": "C:\\kode\\Cinema2026RepoClone\\Cinema2026.API\\appsettings.Development.json",
+              "RelativeToolTip": "Cinema2026.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-14T20:06:15.221Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

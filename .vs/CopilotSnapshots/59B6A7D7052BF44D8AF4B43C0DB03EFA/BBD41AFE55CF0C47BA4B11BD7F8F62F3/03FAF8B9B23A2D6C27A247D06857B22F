@@ -1,0 +1,25 @@
+﻿using Cinema2026.Repo.Models;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cinema2026.Repo.Interfaces
+{
+    public interface IMovieHallRepositories
+    {
+        public Task<ActionResult<IEnumerable<MovieHall>>> GetMovieHall();
+
+        public Task<ActionResult<MovieHall>> GetMovieHall(int moviehallid);
+
+        public Task<IActionResult> PutMovieHall(int? moviehallid, MovieHall moviehall);
+
+        public Task<ActionResult<MovieHall>> PostMovieHall(MovieHall moviehall);
+
+        public Task<IActionResult> DeleteMovieHall(int? moviehallid);
+
+
+
+
+    }
+}

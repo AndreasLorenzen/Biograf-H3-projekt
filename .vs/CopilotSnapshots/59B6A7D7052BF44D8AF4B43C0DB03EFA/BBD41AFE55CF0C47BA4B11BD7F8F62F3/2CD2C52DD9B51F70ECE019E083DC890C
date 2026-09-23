@@ -1,0 +1,20 @@
+﻿using Cinema2026.Repo.Data;
+using Cinema2026.Repo.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cinema2026.Repo.Repositories
+{
+    public class MovieHallRepositories : IMovieHallRepositories
+    {
+        private readonly DatabaseContext context;
+        public MovieHallRepositories(DatabaseContext d)
+        {
+            context = d;
+        }
+
+
+
+    }
+}
