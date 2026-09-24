@@ -38,7 +38,7 @@ namespace Cinema2026.Repo.Repositories
 
         public async Task<Person> PostPerson(Person person)
         {
-            context.Persons.Add(person);
+            await context.Persons.AddAsync(person);
             await context.SaveChangesAsync();
             return person;
         }

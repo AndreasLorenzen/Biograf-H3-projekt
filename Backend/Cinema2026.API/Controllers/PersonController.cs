@@ -17,75 +17,75 @@ namespace Cinema2026.API.Controllers
         }
 
         // Lille hjælpe-metode: oversætter en Person (model) til en PersonReadDto (det vi viser klienten)
-        private PersonReadDto ToReadDto(Person p)
-        {
-            return new PersonReadDto
-            {
-                PersonId = p.PersonId,
-                name = p.name,
-                age = p.age,
-                Password = p.Password,
-                Email = p.Email,
-                MovieHallId = p.MovieHallId
-            };
-        }
+        //private PersonReadDto ToReadDto(Person p)
+        //{
+        //    return new PersonReadDto
+        //    {
+        //        PersonId = p.PersonId,
+        //        name = p.name,
+        //        age = p.age,
+        //        Password = p.Password,
+        //        Email = p.Email,
+        //        MovieHallId = p.MovieHallId
+        //    };
+        //}
 
         // GET: api/Person
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PersonReadDto>>> GetPersons()
+        public async Task<ActionResult<IEnumerable<Person>>> GetPersons()
         {
             var persons = await personRepo.GetPersons();
 
             // .Select() oversætter hver Person i listen til en PersonReadDto
-            var result = persons.Select(ToReadDto);
+            
 
-            return Ok(result);
+            return Ok(persons);
         }
 
         // GET: api/Person/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<PersonReadDto>> GetPerson(int id)
+        public async Task<ActionResult<Person>> GetPerson(int id)
         {
             var person = await personRepo.GetPerson(id);
             if (person == null) return NotFound();
 
-            return ToReadDto(person);
+            return person;
         }
 
         // POST: api/Person
-        [HttpPost]
-        public async Task<ActionResult<PersonReadDto>> PostPerson(PersonCreateDto dto)
+        [HttpPost("CreatePerson")]
+        public async Task<ActionResult<Person>> PostPerson(Person person)
         {
             // Byg en "rigtig" Person ud fra DTO'en - PersonId sættes ikke, databasen genererer det
-            var person = new Person
-            {
-                name = dto.name,
-                age = dto.age,
-                Password = dto.Password,
-                Email = dto.Email,
-                MovieHallId = dto.MovieHallId
-            };
+            //var person = new Person
+            //{
+            //    name = dto.name,
+            //    age = dto.age,
+            //    Password = dto.Password,
+            //    Email = dto.Email,
+            //    MovieHallId = dto.MovieHallId
+            //};
 
             var created = await personRepo.PostPerson(person);
 
             // Returnér den oprettede person som en ReadDto, med 201 Created
-            return CreatedAtAction(nameof(GetPerson), new { id = created.PersonId }, ToReadDto(created));
+            return created;
         }
 
         // PUT: api/Person/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPerson(int id, PersonUpdateDto dto)
+        public async Task<IActionResult> PutPerson(int id, Person person)
         {
             // Byg en Person-model ud fra ID (fra URL) + DTO (fra body)
-            var person = new Person
-            {
-                PersonId = id,
-                name = dto.name,
-                age = dto.age,
-                Password = dto.Password,
-                Email = dto.Email,
-                MovieHallId = dto.MovieHallId
-            };
+            //var person = new Person
+            //{
+            //    PersonId = id,
+            //    name = dto.name,
+            //    age = dto.age,
+            //    Password = dto.Password,
+            //    Email = dto.Email,
+            //    MovieHallId = dto.MovieHallId
+            //};
 
             var success = await personRepo.PutPerson(id, person);
             if (!success) return BadRequest();

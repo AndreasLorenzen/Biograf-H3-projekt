@@ -20,14 +20,13 @@ namespace Cinema2026.Repo.Repositories
         public async Task<IEnumerable<MovieHall>> GetMovieHall()
         {
             // Henter alle sale, og deres tilknyttede personer med det samme
-            return await context.MovieHalls.Include(m => m.Persons).ToListAsync();
+            return await context.MovieHalls.ToListAsync();
         }
 
         public async Task<MovieHall> GetMovieHall(int moviehallid)
         {
             // Henter én sal ud fra ID, inklusiv dens tilknyttede personer
             return await context.MovieHalls
-                .Include(m => m.Persons)
                 .FirstOrDefaultAsync(m => m.MovieHallId == moviehallid);
         }
 

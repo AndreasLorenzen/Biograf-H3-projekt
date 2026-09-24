@@ -13,8 +13,7 @@ namespace Cinema2026.Repo.Models
         public string Email { get; set; }
         public int age { get; set; }
 
-        public int? MovieHallId { get; set; } // Foreign key fra MovieHall}
-        public MovieHall? MovieHall { get; set; } // Navigation property til MovieHall}
+
     }
 
     public class MovieHall
@@ -22,8 +21,6 @@ namespace Cinema2026.Repo.Models
         public int MovieHallId { get; set; } // variable / property -----> primary key
         public bool MovieHalloccupied { get; set; }
         public int? MovieId { get; set; } // Foreign key fra Movie 
-        public Movie? Movie { get; set; } // Navigation property til Movie}
-        public List<Person> Persons { get; set; } = new(); // Navigation property til Person }
     }
 
     public class Movie
@@ -31,7 +28,7 @@ namespace Cinema2026.Repo.Models
         public int MovieId { get; set; } // primary key
         public string Moviename { get; set; }
         public int Movieage { get; set; }
-        public List<MovieHall> MovieHalls { get; set; } = new(); // Navigation property til MovieHall }
+        //public List<MovieHall> MovieHalls { get; set; } = new(); // Navigation property til MovieHall }
 
     }
 

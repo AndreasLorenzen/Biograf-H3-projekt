@@ -16,44 +16,42 @@ namespace Cinema2026.API.Controllers
             _repo = repo;
         }
 
-        private MovieReadDto ToReadDto(Movie m)
-        {
-            return new MovieReadDto
-            {
-                MovieId = m.MovieId,
-                Moviename = m.Moviename,
-                Movieage = m.Movieage,
-                MovieHallIds = m.MovieHalls?.Select(h => h.MovieHallId).ToList() ?? new List<int>()
-            };
-        }
+        //private MovieReadDto ToReadDto(Movie m)
+        //{
+        //    return new MovieReadDto
+        //    {
+        //        MovieId = m.MovieId,
+        //        Moviename = m.Moviename,
+        //        Movieage = m.Movieage,
+        //        //MovieHallIds = m.MovieHalls?.Select(h => h.MovieHallId).ToList() ?? new List<int>()
+        //    };
+        //}
 
         // GET: api/Movie
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<MovieReadDto>>> GetMovies()
+        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
         {
             var movies = await _repo.GetMovies();
-            return Ok(movies.Select(ToReadDto));
+            return Ok(movies);
         }
 
         // GET: api/Movie/5
         [HttpGet("{movieid}")]
-        public async Task<ActionResult<MovieReadDto>> GetMovie(int movieid)
+        public async Task<ActionResult<Movie>> GetMovie(int movieid)
         {
             var movie = await _repo.GetMovie(movieid);
             if (movie == null) return NotFound();
-            return ToReadDto(movie);
+            return movie;
         }
 
         // PUT: api/Movie/5
         [HttpPut("{movieid}")]
-        public async Task<IActionResult> PutMovie(int movieid, MovieUpdateDto dto)
+        public async Task<IActionResult> PutMovie(int movieid, Movie movie)
         {
-            var movie = new Movie
+            if (movieid != movie.MovieId)
             {
-                MovieId = movieid,
-                Moviename = dto.Moviename,
-                Movieage = dto.Movieage
-            };
+                return BadRequest();
+            }
 
             var success = await _repo.PutMovie(movieid, movie);
             if (!success) return BadRequest();
@@ -62,16 +60,10 @@ namespace Cinema2026.API.Controllers
 
         // POST: api/Movie
         [HttpPost]
-        public async Task<ActionResult<MovieReadDto>> PostMovie(MovieCreateDto dto)
+        public async Task<ActionResult<Movie>> PostMovie(Movie movie)
         {
-            var movie = new Movie
-            {
-                Moviename = dto.Moviename,
-                Movieage = dto.Movieage
-            };
-
             var created = await _repo.PostMovie(movie);
-            return CreatedAtAction(nameof(GetMovie), new { movieid = created.MovieId }, ToReadDto(created));
+            return CreatedAtAction(nameof(GetMovie), new { movieid = created.MovieId }, created);
         }
 
         // DELETE: api/Movie/5

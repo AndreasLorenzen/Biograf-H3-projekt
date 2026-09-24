@@ -19,13 +19,12 @@ namespace Cinema2026.Repo.Repositories
         public async Task<IEnumerable<Movie>> GetMovies()
         {
             // Henter alle film, og de sale de vises i, med det samme
-            return await context.Movies.Include(m => m.MovieHalls).ToListAsync();
+            return await context.Movies.ToListAsync();
         }
 
         public async Task<Movie> GetMovie(int movieid)
         {
             return await context.Movies
-                .Include(m => m.MovieHalls)
                 .FirstOrDefaultAsync(m => m.MovieId == movieid);
         }
 

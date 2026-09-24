@@ -99,9 +99,6 @@ namespace Cinema2026.Repo.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("MovieHallId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -115,37 +112,19 @@ namespace Cinema2026.Repo.Migrations
 
                     b.HasKey("PersonId");
 
-                    b.HasIndex("MovieHallId");
-
                     b.ToTable("Persons");
                 });
 
             modelBuilder.Entity("Cinema2026.Repo.Models.MovieHall", b =>
                 {
-                    b.HasOne("Cinema2026.Repo.Models.Movie", "Movie")
+                    b.HasOne("Cinema2026.Repo.Models.Movie", null)
                         .WithMany("MovieHalls")
                         .HasForeignKey("MovieId");
-
-                    b.Navigation("Movie");
-                });
-
-            modelBuilder.Entity("Cinema2026.Repo.Models.Person", b =>
-                {
-                    b.HasOne("Cinema2026.Repo.Models.MovieHall", "MovieHall")
-                        .WithMany("Persons")
-                        .HasForeignKey("MovieHallId");
-
-                    b.Navigation("MovieHall");
                 });
 
             modelBuilder.Entity("Cinema2026.Repo.Models.Movie", b =>
                 {
                     b.Navigation("MovieHalls");
-                });
-
-            modelBuilder.Entity("Cinema2026.Repo.Models.MovieHall", b =>
-                {
-                    b.Navigation("Persons");
                 });
 #pragma warning restore 612, 618
         }

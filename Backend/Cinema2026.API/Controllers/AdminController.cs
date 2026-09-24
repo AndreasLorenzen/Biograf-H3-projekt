@@ -29,32 +29,30 @@ namespace Cinema2026.API.Controllers
 
         // GET: api/Admin
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AdminReadDto>>> GetAdmins()
+        public async Task<ActionResult<IEnumerable<Admin>>> GetAdmins()
         {
             var admins = await _repo.GetAdmins();
-            return Ok(admins.Select(ToReadDto));
+            return Ok(admins);
         }
 
         // GET: api/Admin/5
         [HttpGet("{adminid}")]
-        public async Task<ActionResult<AdminReadDto>> GetAdmin(int adminid)
+        public async Task<ActionResult<Admin>> GetAdmin(int adminid)
         {
             var admin = await _repo.GetAdmin(adminid);
             if (admin == null) return NotFound();
-            return ToReadDto(admin);
+            return admin;
         }
 
         // PUT: api/Admin/5
         [HttpPut("{adminid}")]
-        public async Task<IActionResult> PutAdmin(int adminid, AdminUpdateDto dto)
+        public async Task<IActionResult> PutAdmin(int adminid, Admin admin)
         {
-            var admin = new Admin
+            // Sikrer at ID'et i URL'en matcher ID'et i objektet, man sender
+            if (adminid != admin.AdminId)
             {
-                AdminId = adminid,
-                Username = dto.Username,
-                Password = dto.Password,
-                Email = dto.Email
-            };
+                return BadRequest();
+            }
 
             var success = await _repo.PutAdmin(adminid, admin);
             if (!success) return BadRequest();
@@ -63,17 +61,10 @@ namespace Cinema2026.API.Controllers
 
         // POST: api/Admin
         [HttpPost]
-        public async Task<ActionResult<AdminReadDto>> PostAdmin(AdminCreateDto dto)
+        public async Task<ActionResult<Admin>> PostAdmin(Admin admin)
         {
-            var admin = new Admin
-            {
-                Username = dto.Username,
-                Password = dto.Password,
-                Email = dto.Email
-            };
-
             var created = await _repo.PostAdmin(admin);
-            return CreatedAtAction(nameof(GetAdmin), new { adminid = created.AdminId }, ToReadDto(created));
+            return CreatedAtAction(nameof(GetAdmin), new { adminid = created.AdminId }, created);
         }
 
         // DELETE: api/Admin/5
