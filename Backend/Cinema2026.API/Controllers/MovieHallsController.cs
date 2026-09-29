@@ -1,5 +1,3 @@
-using Cinema2026.API.Dtos;
-using System.Linq;
 using Cinema2026.Repo.Interfaces;
 using Cinema2026.Repo.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -72,7 +70,7 @@ public class MovieHallsController : ControllerBase
 
     // POST: api/MovieHalls
     [HttpPost]
-    public async Task<ActionResult<MovieHallReadDto>> PostMovieHall(MovieHall moviehall)
+    public async Task<ActionResult<MovieHall>> PostMovieHall(MovieHall moviehall)
     {
         // Byg en "rigtig" MovieHall ud fra DTO'en - MovieHallId sættes ikke,
         // databasen genererer det selv

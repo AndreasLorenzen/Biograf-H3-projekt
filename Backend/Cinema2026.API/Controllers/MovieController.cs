@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Cinema2026.Repo.Models;
 using Cinema2026.Repo.Interfaces;
-using Cinema2026.API.Dtos;
 
 namespace Cinema2026.API.Controllers
 {
@@ -28,7 +27,7 @@ namespace Cinema2026.API.Controllers
         //}
 
         // GET: api/Movie
-        [HttpGet]
+        [HttpGet("getMovie")]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
         {
             var movies = await _repo.GetMovies();
@@ -59,7 +58,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // POST: api/Movie
-        [HttpPost]
+        [HttpPost("createMovie")]
         public async Task<ActionResult<Movie>> PostMovie(Movie movie)
         {
             var created = await _repo.PostMovie(movie);

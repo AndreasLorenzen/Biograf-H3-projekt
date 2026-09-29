@@ -54,5 +54,15 @@ namespace Cinema2026.Repo.Repositories
             await context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<Person?> GetByUsername(string username)
+        {
+            return await context.Persons.FirstOrDefaultAsync(p => p.username == username);
+        }
+
+        public async Task<bool> UsernameExists(string username)
+        {
+            return await context.Persons.AnyAsync(p => p.username == username);
+        }
     }
 }

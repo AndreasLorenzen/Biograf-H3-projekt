@@ -1,5 +1,4 @@
-﻿using Cinema2026.API.Dtos;
-using Cinema2026.Repo.Interfaces;
+﻿using Cinema2026.Repo.Interfaces;
 using Cinema2026.Repo.Models;
 using Microsoft.AspNetCore.Mvc;
 

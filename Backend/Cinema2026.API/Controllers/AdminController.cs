@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Cinema2026.Repo.Models;
 using Cinema2026.Repo.Interfaces;
-using Cinema2026.API.Dtos;
 
 namespace Cinema2026.API.Controllers
 {
@@ -16,16 +15,7 @@ namespace Cinema2026.API.Controllers
             _repo = repo;
         }
 
-        private AdminReadDto ToReadDto(Admin a)
-        {
-            return new AdminReadDto
-            {
-                AdminId = a.AdminId,
-                Username = a.Username,
-                Email = a.Email
-                // Password bliver bevidst IKKE mappet med her
-            };
-        }
+
 
         // GET: api/Admin
         [HttpGet]
@@ -60,7 +50,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // POST: api/Admin
-        [HttpPost]
+        [HttpPost("createAdmin")]
         public async Task<ActionResult<Admin>> PostAdmin(Admin admin)
         {
             var created = await _repo.PostAdmin(admin);

@@ -14,5 +14,7 @@ namespace Cinema2026.Repo.Interfaces
         Task<Person> PostPerson(Person person);
         Task<bool> DeletePerson(int? personid);
 
+        Task<Person?> GetByUsername(string username);
+        Task<bool> UsernameExists(string username);
     }
 }

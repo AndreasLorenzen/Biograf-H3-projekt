@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cinema2026.Repo.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20260924075106_start")]
-    partial class start
+    [Migration("20260924122016_start2")]
+    partial class start2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,15 +32,14 @@ namespace Cinema2026.Repo.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminId"));
 
-                    b.Property<string>("Email")
+                    b.Property<int>("adminlevel")
+                        .HasColumnType("int");
+
+                    b.Property<string>("password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
+                    b.Property<string>("username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -57,10 +56,10 @@ namespace Cinema2026.Repo.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MovieId"));
 
-                    b.Property<int>("Movieage")
+                    b.Property<int>("movieDuration")
                         .HasColumnType("int");
 
-                    b.Property<string>("Moviename")
+                    b.Property<string>("movieName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -85,8 +84,6 @@ namespace Cinema2026.Repo.Migrations
 
                     b.HasKey("MovieHallId");
 
-                    b.HasIndex("MovieId");
-
                     b.ToTable("MovieHalls");
                 });
 
@@ -98,36 +95,24 @@ namespace Cinema2026.Repo.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonId"));
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("age")
                         .HasColumnType("int");
 
-                    b.Property<string>("name")
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PersonId");
 
                     b.ToTable("Persons");
-                });
-
-            modelBuilder.Entity("Cinema2026.Repo.Models.MovieHall", b =>
-                {
-                    b.HasOne("Cinema2026.Repo.Models.Movie", null)
-                        .WithMany("MovieHalls")
-                        .HasForeignKey("MovieId");
-                });
-
-            modelBuilder.Entity("Cinema2026.Repo.Models.Movie", b =>
-                {
-                    b.Navigation("MovieHalls");
                 });
 #pragma warning restore 612, 618
         }

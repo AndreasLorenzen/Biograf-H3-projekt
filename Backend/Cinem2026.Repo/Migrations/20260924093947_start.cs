@@ -26,6 +26,20 @@ namespace Cinema2026.Repo.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MovieHalls",
+                columns: table => new
+                {
+                    MovieHallId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MovieHalloccupied = table.Column<bool>(type: "bit", nullable: false),
+                    MovieId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MovieHalls", x => x.MovieHallId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Movies",
                 columns: table => new
                 {
@@ -45,39 +59,15 @@ namespace Cinema2026.Repo.Migrations
                 {
                     PersonId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     age = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Persons", x => x.PersonId);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "MovieHalls",
-                columns: table => new
-                {
-                    MovieHallId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MovieHalloccupied = table.Column<bool>(type: "bit", nullable: false),
-                    MovieId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MovieHalls", x => x.MovieHallId);
-                    table.ForeignKey(
-                        name: "FK_MovieHalls_Movies_MovieId",
-                        column: x => x.MovieId,
-                        principalTable: "Movies",
-                        principalColumn: "MovieId");
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_MovieHalls_MovieId",
-                table: "MovieHalls",
-                column: "MovieId");
         }
 
         /// <inheritdoc />
@@ -90,10 +80,10 @@ namespace Cinema2026.Repo.Migrations
                 name: "MovieHalls");
 
             migrationBuilder.DropTable(
-                name: "Persons");
+                name: "Movies");
 
             migrationBuilder.DropTable(
-                name: "Movies");
+                name: "Persons");
         }
     }
 }

@@ -1,6 +1,7 @@
 using Cinema2026.Repo.Data;
 using Cinema2026.Repo.Interfaces;
 using Cinema2026.Repo.Repositories;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
@@ -32,6 +33,16 @@ builder.Services.AddScoped<IAdminRepositories, AdminRepositories>();
 
 //builder.Services.AddScoped<Interface,class> ();
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Events.OnRedirectToLogin = ctx =>
+        {
+            ctx.Response.StatusCode = 401;
+            return Task.CompletedTask;
+        };
+    });
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -49,7 +60,8 @@ if (app.Environment.IsDevelopment())
 
 
 app.MapControllers();
-
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.Run();
 
