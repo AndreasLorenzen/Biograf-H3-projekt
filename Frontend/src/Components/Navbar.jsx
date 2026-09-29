@@ -1,20 +1,34 @@
 import '../App.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from './Authcontext.jsx'
 
-export default function Navbar(){
-        const navigate = useNavigate()
+export default function Navbar() {
+  const navigate = useNavigate()
+  const { bruger, logout } = useAuth()
 
-    return (
-     <>
-        <div className='commonheader'>
-            <div className='commonheaderleft'>
-            <h1>Andreas BIO</h1>
-            </div>
-            <div className='commonheaderright'>
-            <button id='buttonstyle' onClick={() => navigate('/login')}>Login</button>
-            <button id='buttonstryle' >Program</button>
-            </div>
-        </div>
-     </>   
-    )
+  async function handleLogout() {
+    await logout()
+    navigate('/')
+  }
+
+  return (
+    <div className="CommonHeaderBar">
+      <div className="CommonHeaderLeft">
+        <h1 id="CommonheaderText">Andreas Bio</h1>
+      </div>
+      <div className="CommonHeaderRight">
+        <button id="CommonButton" onClick={() => navigate('/program')}>Program</button>
+        <button id="CommonButton" onClick={() => navigate('/about')}>Om Biografen</button>
+        {bruger ? (
+          <>
+            <button id="CommonButton" onClick={handleLogout}>Log ud</button>
+            <span>Hej {bruger.username}</span>
+
+          </>
+        ) : (
+          <button id="CommonButton" onClick={() => navigate('/login')}>Login</button>
+        )}
+      </div>
+    </div>
+  )
 }

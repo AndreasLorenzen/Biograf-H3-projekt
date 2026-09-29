@@ -1,4 +1,4 @@
-.commonheader {
+.CommonHeaderBar {
   justify-content: space-between;
   border-bottom: 2px solid;
   padding: 10px 10px 0;
@@ -6,7 +6,7 @@
   margin-left: -5px;
 }
 
-.commonheaderright {
+.CommonHeaderRight {
   margin-right: 5px;
   display: flex;
   align-content: center;
@@ -14,19 +14,119 @@
   
 }
 
-.commonheaderleft {
+.CommonHeaderLeft {
   margin-right: -5px;
   display: flex;
   align-content: center;
   justify-content: flex-start;
 }
 
-#buttonstyle {
+#CommonButton {
   border-radius: 6px;
   margin-right: 10px;
   margin-left: 10px;
   margin-top: 10px;
 }
-#buttonstyle:hover {
+#CommonButton:hover {
   background-color: #d3d5d6;
+}
+
+.ProgramContent {
+    margin-top: 100px;
+    font-family: Rockwell Extra ,Rockwell , monospace; 
+}
+
+.ProgramList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ProgramItem {
+    border-bottom: 2px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    padding: 16px;
+    width: fit-content;
+}
+
+.ProgramItem h3 {
+    margin: 0 0 8px;
+}
+
+.ProgramItem ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.PaymentContent {
+  box-sizing: border-box;
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 0 20px 48px;
+}
+
+.PaymentMovie {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #b8bec2;
+}
+
+.PaymentMovie h1,
+.PaymentForm h2 {
+  margin-bottom: 8px;
+}
+
+.PaymentForm {
+  display: grid;
+  gap: 14px;
+}
+
+.PaymentForm h2 {
+  margin-top: 10px;
+}
+
+.PaymentField {
+  display: grid;
+  gap: 6px;
+}
+
+.PaymentField input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid #8b9297;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.PaymentCardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.PaymentSubmit {
+  justify-self: start;
+  min-height: 42px;
+  padding: 8px 18px;
+  border: 1px solid #27343a;
+  border-radius: 4px;
+  background: #27343a;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.PaymentSubmit:hover {
+  background: #3e5963;
+}
+
+@media (max-width: 480px) {
+  .PaymentCardGrid {
+    grid-template-columns: 1fr;
+  }
 }
