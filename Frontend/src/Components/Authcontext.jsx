@@ -1,6 +1,9 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 
+
+// Alt i denne fil er lavet af AI, og jeg kan derfor ikke reddegøre for indholdet
+
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {

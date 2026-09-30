@@ -8,11 +8,11 @@ export default function ErrorPage() {
   return (
     <>
     <Navbar/>
-    <div>
+    <main className="PageShell ErrorContent">
         <h1>Error 404</h1>
         <p>Side findes ikke</p>
         <button onClick={() => navigate('/')}>Tilbage til Home</button>
-    </div>
+    </main>
     
     </>
   )

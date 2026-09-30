@@ -12,6 +12,8 @@ namespace Cinema2026.Repo.Models
         public string password { get; set; }
         public string email { get; set; }
         public int age { get; set; }
+        public int? MovieId { get; set; }
+        public Movie? Movie { get; set; }
 
 
     }

@@ -8,7 +8,7 @@ namespace Cinema2026.API.Controllers
     [ApiController]
     public class PersonController : ControllerBase
     {
-        private readonly IPersonRepositories personRepo;
+        private readonly IPersonRepositories personRepo; // konstruktøren tager imod et interface for at lave løs kobling, med DI.
 
         public PersonController(IPersonRepositories r)
         {
@@ -30,6 +30,7 @@ namespace Cinema2026.API.Controllers
         //}
 
         // GET: api/Person
+        // henter alle personer
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Person>>> GetPersons()
         {
@@ -42,6 +43,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // GET: api/Person/5
+        // Henter person baseret på id
         [HttpGet("{id}")]
         public async Task<ActionResult<Person>> GetPerson(int id)
         {
@@ -52,6 +54,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // POST: api/Person
+        // Laver en person
         [HttpPost("CreatePerson")]
         public async Task<ActionResult<Person>> PostPerson(Person person)
         {
@@ -72,6 +75,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // PUT: api/Person/5
+        // Opdatere person
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPerson(int id, Person person)
         {
@@ -93,6 +97,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // DELETE: api/Person/5
+        // Sletter person
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePerson(int id)
         {

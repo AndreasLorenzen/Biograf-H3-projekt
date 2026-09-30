@@ -8,7 +8,7 @@ namespace Cinema2026.API.Controllers
     [ApiController]
     public class MovieController : ControllerBase
     {
-        private readonly IMovieRepositories _repo;
+        private readonly IMovieRepositories _repo; // løs kobling pga. interface i stedet for klasse
 
         public MovieController(IMovieRepositories repo)
         {
@@ -27,6 +27,7 @@ namespace Cinema2026.API.Controllers
         //}
 
         // GET: api/Movie
+        // Henter samlet liste over film asyncront via repo
         [HttpGet("getMovie")]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
         {
@@ -35,6 +36,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // GET: api/Movie/5
+        // Henter en specifik film ud fra id
         [HttpGet("{movieid}")]
         public async Task<ActionResult<Movie>> GetMovie(int movieid)
         {
@@ -44,6 +46,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // PUT: api/Movie/5
+        // Opdatere en film ud fra id, hvis film ikke findes returneres badrequest
         [HttpPut("{movieid}")]
         public async Task<IActionResult> PutMovie(int movieid, Movie movie)
         {
@@ -58,6 +61,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // POST: api/Movie
+        // Laver en film
         [HttpPost("createMovie")]
         public async Task<ActionResult<Movie>> PostMovie(Movie movie)
         {
@@ -66,6 +70,7 @@ namespace Cinema2026.API.Controllers
         }
 
         // DELETE: api/Movie/5
+        // Sletter en film
         [HttpDelete("{movieid}")]
         public async Task<IActionResult> DeleteMovie(int movieid)
         {

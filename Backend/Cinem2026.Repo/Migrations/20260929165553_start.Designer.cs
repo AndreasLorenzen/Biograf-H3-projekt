@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cinema2026.Repo.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20260924122016_start2")]
-    partial class start2
+    [Migration("20260929165553_start")]
+    partial class start
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -95,6 +95,9 @@ namespace Cinema2026.Repo.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonId"));
 
+                    b.Property<int?>("MovieId")
+                        .HasColumnType("int");
+
                     b.Property<int>("age")
                         .HasColumnType("int");
 
@@ -112,7 +115,18 @@ namespace Cinema2026.Repo.Migrations
 
                     b.HasKey("PersonId");
 
+                    b.HasIndex("MovieId");
+
                     b.ToTable("Persons");
+                });
+
+            modelBuilder.Entity("Cinema2026.Repo.Models.Person", b =>
+                {
+                    b.HasOne("Cinema2026.Repo.Models.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId");
+
+                    b.Navigation("Movie");
                 });
 #pragma warning restore 612, 618
         }

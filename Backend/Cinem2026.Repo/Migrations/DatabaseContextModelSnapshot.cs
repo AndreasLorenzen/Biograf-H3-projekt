@@ -92,6 +92,9 @@ namespace Cinema2026.Repo.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonId"));
 
+                    b.Property<int?>("MovieId")
+                        .HasColumnType("int");
+
                     b.Property<int>("age")
                         .HasColumnType("int");
 
@@ -109,7 +112,18 @@ namespace Cinema2026.Repo.Migrations
 
                     b.HasKey("PersonId");
 
+                    b.HasIndex("MovieId");
+
                     b.ToTable("Persons");
+                });
+
+            modelBuilder.Entity("Cinema2026.Repo.Models.Person", b =>
+                {
+                    b.HasOne("Cinema2026.Repo.Models.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId");
+
+                    b.Navigation("Movie");
                 });
 #pragma warning restore 612, 618
         }

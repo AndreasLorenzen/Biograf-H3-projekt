@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
+// program.cs er stedet der binder alting sammen
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

@@ -16,9 +16,9 @@ namespace Cinema2026.Repo.Migrations
                 {
                     AdminId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    adminlevel = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,8 +45,8 @@ namespace Cinema2026.Repo.Migrations
                 {
                     MovieId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Moviename = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Movieage = table.Column<int>(type: "int", nullable: false)
+                    movieName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    movieDuration = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -62,12 +62,23 @@ namespace Cinema2026.Repo.Migrations
                     username = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    age = table.Column<int>(type: "int", nullable: false)
+                    age = table.Column<int>(type: "int", nullable: false),
+                    MovieId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Persons", x => x.PersonId);
+                    table.ForeignKey(
+                        name: "FK_Persons_Movies_MovieId",
+                        column: x => x.MovieId,
+                        principalTable: "Movies",
+                        principalColumn: "MovieId");
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Persons_MovieId",
+                table: "Persons",
+                column: "MovieId");
         }
 
         /// <inheritdoc />
@@ -80,10 +91,10 @@ namespace Cinema2026.Repo.Migrations
                 name: "MovieHalls");
 
             migrationBuilder.DropTable(
-                name: "Movies");
+                name: "Persons");
 
             migrationBuilder.DropTable(
-                name: "Persons");
+                name: "Movies");
         }
     }
 }

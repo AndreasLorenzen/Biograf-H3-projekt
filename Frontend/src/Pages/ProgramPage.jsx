@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import '../App.css'
 import Navbar from '../Components/Navbar'
 
+// I den her fil gør vi brug af fetch til at hente data, og render det på siden
 
 export default function Program() {
     const navigate = useNavigate()
@@ -20,22 +21,24 @@ export default function Program() {
     <>
     <Navbar/>
 
-    <div>
+    <main className="PageShell">
+    <section className="PageIntro">
         <h1>Hej</h1>
-        <p>Her ser du oversigten over film der spilles</p>
-    </div>
-    
+        <p>Her ser du oversigten over film der spilles.</p>
+    </section>
     
     <div className='ProgramContent'>
-        {movieData.map((movie) => (
-            <div key={movie.movieId}>
-                <h1>{movie.movieName}</h1>
-                <p>{movie.movieDuration}</p>
-                <button onClick={() => navigate('/payment', { state: { movie } })}>Book film</button>
-            </div>
-        ))}
+        <div className="ProgramList">
+            {movieData.map((movie) => (
+                <article className="ProgramItem" key={movie.movieId}>
+                    <h2>{movie.movieName}</h2>
+                    <p>Varighed: {movie.movieDuration} minutter</p>
+                    <button onClick={() => navigate('/payment', { state: { movie } })}>Book film</button>
+                </article>
+            ))}
+        </div>
     </div>
-    
+    </main>
 
     </>
     )

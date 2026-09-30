@@ -1,4 +1,6 @@
 <Solution>
+  <Folder Name="/Cinem2026.Repo/" />
   <Project Path="Cinem2026.Repo/Cinema2026.Repo.csproj" />
   <Project Path="Cinema2026.API/Cinema2026.API.csproj" />
+  <Project Path="Cinema2026.Repo.Tests/Cinema2026.Repo.Tests.csproj" />
 </Solution>

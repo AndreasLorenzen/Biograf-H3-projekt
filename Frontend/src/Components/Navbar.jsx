@@ -2,6 +2,8 @@ import '../App.css'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from './Authcontext.jsx'
 
+// denne fil indeholder alt der skal være i navbar, som er på alle sider.
+
 export default function Navbar() {
   const navigate = useNavigate()
   const { bruger, logout } = useAuth()

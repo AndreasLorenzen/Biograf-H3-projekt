@@ -9,6 +9,8 @@ namespace Cinema2026.Repo.Data
 {
     public class DatabaseContext :DbContext
     {
+        // En databasecontext fungere som en bro mellem backend og database
+
         //add-migration name
         //update-database
 

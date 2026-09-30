@@ -8,6 +8,7 @@ import PaymentPage from './Pages/PaymentPage.jsx'
 import ProgramPage from './Pages/ProgramPage.jsx';
 import AdminPage from './Pages/AdminPage.jsx';
 
+// Denne fil står for al routing i hele projektet
 
 function App() {
   return (

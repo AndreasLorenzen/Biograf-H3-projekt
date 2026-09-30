@@ -59,28 +59,36 @@ export default function AdminPage() {
         <>
         <Navbar/>
         
+        <main className="PageShell AdminContent">
         {(adminNameLogin !== adminName || adminPasswordLogin !== adminpassword) &&
-        <div>
+        <section className="AdminPanel">
+        <h1>Administration</h1>
         <input type="text" placeholder='Brugernavn' value={adminNameLogin} onChange={(e) => setAdminNameLogin(e.target.value)}/>
         <input type="password" placeholder='password' value={adminPasswordLogin} onChange={(e) => setAdminPasswordLogin(e.target.value)}/>
-        </div>
+        </section>
         }   
 
         {adminNameLogin === adminName && adminPasswordLogin === adminpassword &&
-        <div>
-            <div>
+        <section className="AdminPanel">
+            <h1>Administration</h1>
+            <div className="AdminForms">
+            <section className="AdminFormGroup">
+                <h2>Opret administrator</h2>
                 <input type="text" value={username} placeholder='brugernavn' onChange={(e) => setUsername(e.target.value)}/>
                 <input type="password" value={password} placeholder='password' onChange={(e) => setPassword(e.target.value)}/>
                 <input type="number" value={adminlevel} placeholder='adminlevel' onChange={(e) => setAdminlevel(e.target.value)}/>
                 <button onClick={createAdmin}>Opret admin</button>
-            </div>
-            <div>
+            </section>
+            <section className="AdminFormGroup">
+                <h2>Tilføj film</h2>
                 <input type="text" value={movieName} placeholder='MovieName' onChange={(e) => setMovieName(e.target.value)}/>
                 <input type="number" value={movieDuration} placeholder='MovieDuration' onChange={(e) => setMovieDuration(e.target.value)}/>
                 <button onClick={CreateMovie}>Opret film</button>
+            </section>
             </div>
-        </div>
+        </section>
         }
+        </main>
 
         </>
     )

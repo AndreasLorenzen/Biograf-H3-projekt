@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Cinema2026.Repo.Interfaces
 {
+    // Et interface er en kontrakt man kan sætte på en klasse, så den klasse skal opfylde de krav der er i interfacet.
+    // et interface indeholder sjællent noget rigtig kode, men bare de funktioner der skal være i den pågældene klasse.
     public interface IPersonRepositories
     {
         Task<IEnumerable<Person>> GetPersons();
